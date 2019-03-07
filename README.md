@@ -1,6 +1,7 @@
 ## Terraform module to acquire certs from ACME-compatible providers
 
 This repo is a terraform module for ACME ssl acquisition with gcloud/route53 dns challenge.
+Certificates are stored in state and can be used by other resources. Private key can be specified in case you are using certificate pinning.
 
 Usage:
 
