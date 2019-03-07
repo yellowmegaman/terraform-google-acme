@@ -13,8 +13,7 @@ resource "acme_registration" "reg" {
 
 resource "tls_cert_request" "req" {
   key_algorithm   = "RSA"
-  private_key_pem = "${var.ssl_private_key != "" ? var.ssl_private_key : ""}"
-
+  private_key_pem = "${file("${var.ssl_private_key != "" ? var.ssl_private_key : ""}")}"
   subject {
     common_name   = "${var.common_name}"
     organization  = "${var.organization}"
