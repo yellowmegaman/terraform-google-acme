@@ -2,7 +2,7 @@ variable "acme_url" {
   default     = "https://acme-v02.api.letsencrypt.org/directory"
   description = "ACME url, defaults to production letsencrypt"
 }
-account_key {
+variable "account_key" {
   default     = ""
   description = "ACME account pem. leave blank to generate"
 }

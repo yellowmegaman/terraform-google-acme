@@ -17,7 +17,7 @@ resource "tls_cert_request" "req" {
 
   subject {
     common_name   = "${var.common_name}"
-    organization  = "${var.org}"
+    organization  = "${var.organization}"
   }
 }
 
