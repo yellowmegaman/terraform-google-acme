@@ -1,8 +1,8 @@
-# Terraform module to acquire certs from ACME-compatible providers
+## Terraform module to acquire certs from ACME-compatible providers
 
 This repo is a terraform module for ACME ssl acquisition with gcloud/route53 dns challenge.
 
-Usage
+Usage:
 
 ```
 module "mycert" {
