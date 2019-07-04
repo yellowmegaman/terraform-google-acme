@@ -2,8 +2,12 @@ provider "acme" {
   server_url      = var.acme_url
 }
 
+resource "tls_private_key" "reg_private_key" {
+  algorithm       = "RSA"
+}
+
 resource "acme_registration" "reg" {
-  account_key_pem = var.account_key
+  account_key_pem = tls_private_key.reg_private_key.private_key_pem
   email_address   = var.email
 }
 
