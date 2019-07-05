@@ -1,5 +1,5 @@
 provider "acme" {
-  server_url      = var.acme_url
+  server_url      = "https://acme-v02.api.letsencrypt.org/directory"
 }
 
 resource "tls_private_key" "reg_private_key" {
